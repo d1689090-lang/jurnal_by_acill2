@@ -208,3 +208,51 @@ document.body.classList.toggle("light");
 renderTable();
 updateDashboard();
 drawChart();
+
+// ===============================
+// Hapus Trade
+// ===============================
+
+function deleteTrade(index){
+
+    if(confirm("Hapus trade ini?")){
+
+        trades.splice(index,1);
+
+        saveTrades();
+
+        renderTable();
+
+        updateDashboard();
+
+        drawChart();
+
+    }
+
+}
+
+// ===============================
+// Edit Trade
+// ===============================
+
+function editTrade(index){
+
+    const trade=trades[index];
+
+    document.getElementById("date").value=trade.date;
+    document.getElementById("pair").value=trade.pair;
+    document.getElementById("type").value=trade.type;
+    document.getElementById("lot").value=trade.lot;
+    document.getElementById("profitInput").value=trade.profit;
+
+    trades.splice(index,1);
+
+    saveTrades();
+
+    renderTable();
+
+    updateDashboard();
+
+    drawChart();
+
+}
