@@ -222,3 +222,22 @@ header h1{
 }
 
 }
+
+.editBtn{
+    background:#3b82f6;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.deleteBtn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
