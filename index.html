@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Trading Journal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="assets/logo.png">
+
+<h2>Journal</h2>
+
+</div>
+
+<ul>
+
+<li class="active">Dashboard</li>
+
+<li>Trading</li>
+
+<li>Statistik</li>
+
+<li>Kalender</li>
+
+<li>AI Analisis</li>
+
+<li>Pengaturan</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Trading Journal</h1>
+
+<button id="darkMode">🌙</button>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Balance</h3>
+
+<h2 id="balance">$10000</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Profit</h3>
+
+<h2 id="profit">$0</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Win Rate</h3>
+
+<h2 id="winrate">0%</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Total Trade</h3>
+
+<h2 id="tradeCount">0</h2>
+
+</div>
+
+</div>
+
+<div class="chartBox">
+
+<canvas id="equityChart"></canvas>
+
+</div>
+
+<div class="tableBox">
+
+<h2>Trading Journal</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tanggal</th>
+
+<th>Pair</th>
+
+<th>Buy/Sell</th>
+
+<th>Lot</th>
+
+<th>Profit</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tradeTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="formBox">
+
+<h2>Tambah Trade</h2>
+
+<input id="date" type="date">
+
+<input id="pair" placeholder="Pair">
+
+<select id="type">
+
+<option>BUY</option>
+
+<option>SELL</option>
+
+</select>
+
+<input id="lot" type="number" placeholder="Lot">
+
+<input id="profitInput" type="number" placeholder="Profit">
+
+<button onclick="addTrade()">Simpan Trade</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
