@@ -1,1 +1,224 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
+body{
+    background:#111827;
+    color:#fff;
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:240px;
+    background:#1f2937;
+    padding:20px;
+    position:fixed;
+    height:100%;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:#f59e0b;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar li:hover{
+    background:#374151;
+}
+
+.sidebar .active{
+    background:#f59e0b;
+    color:#111;
+    font-weight:bold;
+}
+
+/* Main */
+
+.main{
+    margin-left:260px;
+    width:100%;
+    padding:25px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+header h1{
+    font-size:28px;
+}
+
+#darkMode{
+    border:none;
+    background:#f59e0b;
+    color:#111;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.4);
+}
+
+.card h3{
+    color:#9ca3af;
+    margin-bottom:10px;
+}
+
+.card h2{
+    color:#10b981;
+    font-size:28px;
+}
+
+/* Chart */
+
+.chartBox{
+    margin-top:30px;
+    background:#1f2937;
+    padding:20px;
+    border-radius:15px;
+}
+
+/* Table */
+
+.tableBox{
+    margin-top:30px;
+    background:#1f2937;
+    padding:20px;
+    border-radius:15px;
+    overflow:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#374151;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #374151;
+}
+
+/* Form */
+
+.formBox{
+    margin-top:30px;
+    background:#1f2937;
+    padding:20px;
+    border-radius:15px;
+}
+
+.formBox h2{
+    margin-bottom:15px;
+}
+
+.formBox input,
+.formBox select{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    background:#111827;
+    color:white;
+    border:1px solid #374151;
+    border-radius:10px;
+}
+
+.formBox button{
+    width:100%;
+    padding:14px;
+    background:#f59e0b;
+    color:#111;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.formBox button:hover{
+    transform:scale(1.02);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.sidebar{
+    width:80px;
+}
+
+.logo h2{
+    display:none;
+}
+
+.sidebar li{
+    font-size:12px;
+    text-align:center;
+    padding:10px;
+}
+
+.main{
+    margin-left:90px;
+    padding:15px;
+}
+
+header h1{
+    font-size:22px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+}
