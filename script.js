@@ -86,9 +86,12 @@ table.innerHTML+=`
 <td>${trade.lot}</td>
 
 <td style="color:${trade.profit>=0?'#22c55e':'#ef4444'}">
-
 ${trade.profit}
+</td>
 
+<td>
+<button class="editBtn" onclick="editTrade(${index})">Edit</button>
+<button class="deleteBtn" onclick="deleteTrade(${index})">Hapus</button>
 </td>
 
 </tr>
