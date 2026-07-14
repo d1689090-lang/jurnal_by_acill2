@@ -27,6 +27,18 @@
 
 <h2>Journal</h2>
 
+  <div class="filterBox">
+
+<input type="text" id="searchPair" placeholder="Cari Pair..." onkeyup="filterTrade()">
+
+<select id="filterType" onchange="filterTrade()">
+<option value="">Semua</option>
+<option value="BUY">BUY</option>
+<option value="SELL">SELL</option>
+</select>
+
+  </div>
+
 </div>
 
 <ul>
